@@ -19,6 +19,15 @@
   box-sizing: border-box;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 body {
   background-color: var(--dark-blue);
   color: var(--white-100);
