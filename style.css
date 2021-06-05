@@ -120,7 +120,7 @@ ul li p {
   mix-blend-mode: color-burn;
 }
 
-@media (min-width: 374.98px) {
+@media (min-width: 699.98px) {
   main {
     flex-direction: row;
   }
