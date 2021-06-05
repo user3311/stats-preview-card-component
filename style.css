@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  --dark-blue: hsl(233, 47%, 7%);
+  --blue: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
+  --white-100: hsl(0, 0%, 100%);
+  --white-75: hsla(0, 0%, 100%, 0.75);
+  --white-60: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--white-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--blue);
+  padding: 2.5rem 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.content > p {
+  color: var(--white-75);
+  margin-bottom: 2.5rem;
+}
+
+.content .highlight {
+  color: var(--violet);
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin-bottom: 2rem;
+}
+
+ul li:last-of-type {
+  margin-bottom: 0;
+}
+
+ul li p {
+  color: var(--white-60);
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 0.5em;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.photo {
+  display: flex;
+  order: -1;
+  border-radius: 10px 10px 0 0;
+  min-height: 200px;
+  position: relative;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.photo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--violet);
+  opacity: 0.5;
+}
+
+.photo .overlay-burn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--violet);
+  mix-blend-mode: color-burn;
+}
+
+@media (min-width: 374.98px) {
+  main {
+    flex-direction: row;
+  }
+
+  .content {
+    flex: 1 1 50%;
+    border-radius: 10px 0 0 10px;
+    justify-content: start;
+    text-align: left;
+    padding: 4rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content > p {
+    margin-bottom: 3.5rem;
+  }
+
+  ul {
+    display: flex;
+    margin-top: auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  ul li {
+    margin-bottom: 0;
+  }
+
+  .photo {
+    flex: 1 1 50%;
+    order: 0;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .photo .overlay,
+  .photo .overlay-burn {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+@media (max-width: 899.98px) {
+  .content {
+    padding: 1rem;
+  }
+}
